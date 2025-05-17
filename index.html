@@ -315,73 +315,6 @@ function showContact() {
     </ul>
   </section>
 
-  <!-- Seksyen Wishlist -->
-  <section id="wishlist">
-    <h2>Wishlist</h2>
-    <div id="wishlist"></div>
-
-<script>
-  const wishlist = [
-    {
-      name: "Wireless Earbuds",
-      link: "https://shopee.com.my/product/123456789/987654321",
-      image: "https://cf.shopee.com.my/file/item-image.jpg",
-      receiverName: "Ali Bin Abu",
-      address: "No 123, Jalan Mawar, 43000 Kajang, Selangor",
-      phone: "012-3456789",
-      purchasedFrom: "Shopee - Kedai Techno"
-    },
-    {
-      name: "Laptop Stand",
-      link: "https://shopee.com.my/product/223344556/667788990",
-      image: "https://cf.shopee.com.my/file/laptop-stand.jpg",
-      receiverName: "Nur Aisyah",
-      address: "Lot 45, Kampung Baru, 21000 Kuala Terengganu",
-      phone: "013-8765432",
-      purchasedFrom: "Shopee - GadgetPro"
-    }
-  ];
-
-  const wishlistContainer = document.getElementById("wishlist");
-
-  wishlist.forEach((item, index) => {
-    const itemId = `copy-info-${index}`;
-    const itemInfo = `
-      Item: ${item.name}
-Dari: ${item.purchasedFrom}
-Penerima: ${item.receiverName}
-Alamat: ${item.address}
-No. Telefon: ${item.phone}
-Link: ${item.link}
-    `;
-
-    const itemHTML = `
-      <div style="border:1px solid #ccc; padding:10px; margin:10px;">
-        <img src="${item.image}" alt="${item.name}" style="width:100px;"><br>
-        <strong><a href="${item.link}" target="_blank">${item.name}</a></strong><br>
-        <p><b>Dari:</b> ${item.purchasedFrom}</p>
-        <p><b>Penerima:</b> ${item.receiverName}</p>
-        <p><b>Alamat:</b> ${item.address}</p>
-        <p><b>No. Telefon:</b> ${item.phone}</p>
-        <textarea id="${itemId}" style="display:none;">${itemInfo}</textarea>
-        <button onclick="copyInfo('${itemId}')">Salin Maklumat</button>
-      </div>
-    `;
-    wishlistContainer.innerHTML += itemHTML;
-  });
-
-  function copyInfo(textareaId) {
-    const textarea = document.getElementById(textareaId);
-    textarea.style.display = "block";
-    textarea.select();
-    document.execCommand("copy");
-    textarea.style.display = "none";
-    alert("Maklumat telah disalin!");
-  }
-</script>
-    </ul>
-  </section>
-
   <!-- Seksyen Contact -->
   <section id="contact">
     <h2>Contact</h2>
@@ -420,6 +353,118 @@ Link: ${item.link}
     </footer>
 
   </div>
+
+
+
+
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wishlist Hadiah Kahwin</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f9fa;
+      padding: 20px;
+    }
+    .gift-item {
+      background: #ffffff;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      display: flex;
+      align-items: center;
+    }
+    .gift-item img {
+      width: 80px;
+      height: auto;
+      margin-right: 15px;
+      border-radius: 5px;
+    }
+    .gift-info {
+      flex: 1;
+    }
+    .gift-title {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .btn {
+      padding: 6px 12px;
+      border: none;
+      border-radius: 6px;
+      margin-right: 5px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .btn-tempah {
+      background-color: #007bff;
+      color: white;
+    }
+    .btn-telah {
+      background-color: #28a745;
+      color: white;
+      cursor: default;
+    }
+    .btn-link {
+      background-color: #6c757d;
+      color: white;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Wishlist Perkahwinan</h2>
+
+  <div class="gift-item">
+    <img src="https://via.placeholder.com/80" alt="Microwave">
+    <div class="gift-info">
+      <div class="gift-title">Midea Microwave Oven</div>
+      <button class="btn btn-telah" disabled>✔ Telah Ditempah</button>
+    </div>
+  </div>
+
+  <div class="gift-item">
+    <img src="https://via.placeholder.com/80" alt="Iron">
+    <div class="gift-info">
+      <div class="gift-title">Philips Steam Iron</div>
+      <a href="https://shopee.com" class="btn btn-link" target="_blank">🔗 Link Item</a>
+      <button class="btn btn-tempah" onclick="tempah(this)">Tempah</button>
+    </div>
+  </div>
+
+  <div class="gift-item">
+    <img src="https://via.placeholder.com/80" alt="Blender">
+    <div class="gift-info">
+      <div class="gift-title">Tefal Blender BL2B01</div>
+      <a href="https://shopee.com" class="btn btn-link" target="_blank">🔗 Link Item</a>
+      <button class="btn btn-tempah" onclick="tempah(this)">Tempah</button>
+    </div>
+  </div>
+
+  <script>
+    function tempah(button) {
+      button.innerText = '✔ Telah Ditempah';
+      button.classList.remove('btn-tempah');
+      button.classList.add('btn-telah');
+      button.disabled = true;
+    }
+  </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+  
  
   <script>
     const startBtn = document.getElementById('start-btn');
