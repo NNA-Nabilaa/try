@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wishlist Hadiah Kahwin</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f7f7f7;
+      margin: 0;
+      padding: 20px;
+    }
+    .gift-item {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 15px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+    }
+    .gift-item img {
+      width: 80px;
+      height: auto;
+      margin-right: 15px;
+      border-radius: 5px;
+    }
+    .gift-info {
+      flex: 1;
+    }
+    .gift-title {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .btn {
+      padding: 6px 10px;
+      border: none;
+      border-radius: 6px;
+      margin-right: 5px;
+      cursor: pointer;
+    }
+    .btn-tempah {
+      background-color: #007bff;
+      color: white;
+    }
+    .btn-telah {
+      background-color: #28a745;
+      color: white;
+      cursor: default;
+    }
+    .btn-link {
+      background-color: #6c757d;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="gift-item">
+    <img src="https://example.com/microwave.jpg" alt="Microwave">
+    <div class="gift-info">
+      <div class="gift-title">Midea Microwave Oven</div>
+      <button class="btn btn-telah" disabled>✔ Telah Ditempah</button>
+    </div>
+  </div>
+
+  <div class="gift-item">
+    <img src="https://example.com/iron.jpg" alt="Iron">
+    <div class="gift-info">
+      <div class="gift-title">PHILIPS GC6740 FASTCARE IRON</div>
+      <a href="https://shopee.com/iron-link" class="btn btn-link">🔗 Link Item</a>
+      <button class="btn btn-tempah">Tempah</button>
+    </div>
+  </div>
+
+</body>
+</html>
